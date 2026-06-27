@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-str1 = "Holberton"
-str2 = "School"
-print("Welcome to {} {}!".format(str1, str2))
+str = "Holberton School"
+print("First 3 characters: {}".format(str[:3]))
+print("Last 2 characters: {}".format(str[-2:]))
+print("Middle 9 characters: {}".format(str[1:-1]))
