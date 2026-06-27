@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 str = "Holberton School"
 print(f"First 3 characters: {str[:3]}")
 print(f"Last 2 characters: {str[-2:]}")
