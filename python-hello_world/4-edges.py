@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 str = "Holberton School"
-print(f"First 3 characters: {str[:3]}")
-print(f"Last 2 characters: {str[-2:]}")
-print(f"Middle 9 characters: {str[1:-1]}")
+print("First 3 characters: {}".format(str[:3]))
+print("Last 2 characters: {}".format(str[-2:]))
+print("Middle 9 characters: {}".format(str[1:-1]))

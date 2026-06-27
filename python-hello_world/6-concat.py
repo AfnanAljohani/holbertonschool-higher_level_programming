@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-word = "Python"
-word_hello = word * 3 + " is fun!"
-print(word_hello)
+str1 = "Holberton"
+str2 = "School"
+str3 = str1 + " " + str2
+print("{}".format(str3))
