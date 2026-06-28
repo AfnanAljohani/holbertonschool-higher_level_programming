@@ -13,7 +13,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """Retrieve a dict representation, optionally filtered by attrs."""
-        if (type(attrs) == list and
-                all(type(e) == str for e in attrs)):
+        if (isinstance(attrs, list) and
+                all(isinstance(e, str) for e in attrs)):
             return {k: v for k, v in self.__dict__.items() if k in attrs}
         return self.__dict__
