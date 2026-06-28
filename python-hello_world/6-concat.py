@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-str = "Holberton School"
-print(str[:-1])
-print(str[1:])
-print(str[1:-1])
+str1 = "Python is cool"
+str2 = "Python is fun"
+print(f"{str1} and {str2}")
