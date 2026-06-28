@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-str1 = "Holberton"
-str2 = "School"
-print("Welcome to {} {}!".format(str1, str2))
+str = "Holberton School"
+print(f"{str[:-1]}")
+print(f"{str[1:]}")
+print(f"{str[1:-1]}")
