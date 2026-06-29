@@ -1,17 +1,26 @@
 #!/usr/bin/python3
-"""This module provides a function that prints a name.
-
-It validates that both first and last names are strings.
-"""
+"""This module defines a matrix division function."""
 
 
-def say_my_name(first_name, last_name=""):
-    """Print "My name is <first_name> <last_name>".
+def matrix_divided(matrix, div):
+    """Return a new matrix with all elements of matrix divided by div.
 
-    Raises TypeError if names are not strings.
+    matrix must be a list of lists of integers/floats with equal row sizes,
+    and div must be a non-zero number. Results are rounded to 2 decimals.
     """
-    if not isinstance(first_name, str):
-        raise TypeError("first_name must be a string")
-    if not isinstance(last_name, str):
-        raise TypeError("last_name must be a string")
-    print("My name is {} {}".format(first_name, last_name))
+    err = "matrix must be a matrix (list of lists) of integers/floats"
+    if not isinstance(matrix, list) or matrix == []:
+        raise TypeError(err)
+    for row in matrix:
+        if not isinstance(row, list) or row == []:
+            raise TypeError(err)
+        for e in row:
+            if not isinstance(e, (int, float)):
+                raise TypeError(err)
+    if not all(len(row) == len(matrix[0]) for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
+    return [[round(e / div, 2) for e in row] for row in matrix]

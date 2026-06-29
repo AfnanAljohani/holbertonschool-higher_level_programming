@@ -1,18 +1,14 @@
 #!/usr/bin/python3
-"""This module provides a function that prints a square.
-
-The square is drawn using the '#' character.
-"""
+"""This module defines a function that prints a full name."""
 
 
-def print_square(size):
-    """Print a square with the '#' character.
+def say_my_name(first_name, last_name=""):
+    """Print "My name is <first_name> <last_name>".
 
-    Raises TypeError or ValueError for invalid size.
+    first_name and last_name must be strings, otherwise a TypeError is raised.
     """
-    if not isinstance(size, int):
-        raise TypeError("size must be an integer")
-    if size < 0:
-        raise ValueError("size must be >= 0")
-    for i in range(size):
-        print("#" * size)
+    if not isinstance(first_name, str):
+        raise TypeError("first_name must be a string")
+    if not isinstance(last_name, str):
+        raise TypeError("last_name must be a string")
+    print("My name is {} {}".format(first_name, last_name))

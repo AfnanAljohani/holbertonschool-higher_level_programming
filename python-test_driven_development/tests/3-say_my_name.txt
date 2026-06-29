@@ -1,18 +1,18 @@
 The ``3-say_my_name`` module
 ============================
 
->>> print_square = __import__('3-say_my_name').print_square
+>>> say_my_name = __import__('3-say_my_name').say_my_name
 
-Square of size 3:
-    >>> print_square(3)
-    ###
-    ###
-    ###
+>>> say_my_name("John", "Smith")
+My name is John Smith
 
-Size zero (no output):
-    >>> print_square(0)
+>>> say_my_name("Walter")
+My name is Walter 
 
-Negative size:
-    >>> print_square(-1)
-    Traceback (most recent call last):
-    ValueError: size must be >= 0
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("John", 12)
+Traceback (most recent call last):
+TypeError: last_name must be a string
